@@ -1,0 +1,98 @@
+
+/* --------------- Button effect --------------- */
+
+.buttonEffect {
+    outline: none !important;
+    background-color: rgb(40, 40, 40);
+    transition: background-color 0.035s ease-in-out, transform 0.025s ease-in-out, outline 0.035s ease-out;
+}
+
+.buttonEffect:hover {
+    outline: 2px solid rgb(97, 97, 97) !important;
+    background-color: rgb(24, 24, 24) !important;
+}
+
+.buttonEffect:active {
+    outline: 10px solid rgb(250, 250, 250) !important;
+    transform: scale(0.975);
+    background-color: rgb(97, 97, 97) !important;
+}
+
+/* --------------- Hover effect --------------- */
+
+.hoverEffect {
+    transition: transform .05s ease-in-out;
+}
+
+.hoverEffect:hover {
+    transform: scale(1.05);
+}
+
+/* --------------- Input box effect --------------- */
+
+input:focus {
+    outline: 2px solid transparent;
+    outline-color: rgb(40, 40, 40);
+    animation: outline-fade 2s linear infinite;
+}
+
+/* --------------- Warning box effect --------------- */
+
+.warningBox {
+    width: 75%;
+    height: 5%;
+    transform: scale(0);
+    background-color: rgb(143, 54, 54);
+    outline: 2px solid transparent;
+    outline-color: rgb(200, 0, 0);
+    transition: transform 0.25s ease-in-out, margin-top 0.25s ease-in-out, margin-bottom 0.25s ease-in-out, background-color 0.25, ease-in-out;
+    animation: outline-fade-red 2s linear infinite;
+}
+
+.warningText {
+    color: rgb(255, 255, 255);
+    transition: margin-top 0.25s ease-in-out, margin-bottom 0.25s ease-in-out;
+}
+
+.warningButton {
+    background-color: rgb(40, 40, 40);
+    transition: background-color 0.25, ease-in-out;
+}
+
+/* --------------- Checkboxes --------------- */
+
+.checkboxDiv {
+    transition: background-color 0.25s ease-in-out;
+}
+
+/* --------------- Confetti --------------- */
+
+.confetti {
+    transition: margin-top 5s ease-in-out;
+}
+
+/* --------------- KEYFRAMES --------------- */
+
+@keyframes outline-fade-red {
+    0% {
+        outline-color: transparent;
+    }
+    50% {
+        outline-color: rgb(200, 0, 0);
+    }
+    100% {
+        outline-color: transparent;
+    }  
+}
+
+@keyframes outline-fade {
+    0% {
+        outline-color: transparent;
+    }
+    50% {
+        outline-color: rgb(40, 40, 40);
+    }
+    100% {
+        outline-color: transparent;
+    }  
+}
