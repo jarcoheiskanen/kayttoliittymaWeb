@@ -11,8 +11,11 @@ console.log(Math.random() * 100)
 const checkboxHolders = document.querySelectorAll('.checkboxHolder');
 
 checkboxHolders.forEach((checkboxHolder) => {
+    const checkbox = checkboxHolder.querySelector('#checkbox');
+    checkbox.addEventListener('click', () => { // Kuuntelee jos sitä painetaan
+        checkbox.checked = !checkbox.checked; // Vaihtaa checkbox:in 'checked' sen vastapuoliseen valueen. Esim: false -> true
+    });
     checkboxHolder.addEventListener('click', () => { // Kuuntelee jos sitä painetaan
-        const checkbox = checkboxHolder.querySelector('#checkbox')
         checkbox.checked = !checkbox.checked; // Vaihtaa checkbox:in 'checked' sen vastapuoliseen valueen. Esim: false -> true
     });
 });
